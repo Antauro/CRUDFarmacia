@@ -3,8 +3,7 @@
 CRUD de empleados y estatus.
 
 
-Script de Microsoft SQL Server
----------------------------------------------------------------------------------------------------------------------------------------------
+Script de Microsoft SQL Server:
 
 create database DBFarmacia
 GO
@@ -32,5 +31,3 @@ insert into Estatus values('Activo'), ('Inactivo')
 insert into Empleado values('Diego', 'Mendez', '809-111-2222', 'diego@farmacia.com', 1)
 insert into Empleado values('Francisco', 'Carvajal', '809-222-3333', 'francisco@farmacia.com', 2)
 insert into Empleado values('Maira', 'Medina', '809-555-2323', 'maira@farmacia.com', 1)
-
----------------------------------------------------------------------------------------------------------------------------------------------
