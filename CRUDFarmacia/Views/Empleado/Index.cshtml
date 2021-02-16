@@ -1,0 +1,37 @@
+﻿@model IEnumerable<CRUDFarmacia.Models.EmpleadoViewModel>
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h3>Lista de Empleados</h3>
+<hr />
+<p>
+    @Html.ActionLink("Agregar", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Teléfono</th>
+        <th>Correo</th>
+        <th>Estatus</th>
+        <th>Acción</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.EmpleadoDetails.Nombre)</td>
+            <td>@Html.DisplayFor(modelItem => item.EmpleadoDetails.Apellido)</td>
+            <td>@Html.DisplayFor(modelItem => item.EmpleadoDetails.Telefono)</td>
+            <td>@Html.DisplayFor(modelItem => item.EmpleadoDetails.Correo)</td>
+            <td>@Html.DisplayFor(modelItem => item.EstatusDetails.Nombre)</td>
+            <td>
+                @Html.ActionLink("Modificar", "Edit", new { id= item.EmpleadoDetails.Id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.EmpleadoDetails.Id })
+            </td>
+        </tr>
+    }
+
+</table>

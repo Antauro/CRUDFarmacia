@@ -1,0 +1,33 @@
+﻿@model CRUDFarmacia.Models.Estatus
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h3>Eliminar Estatus</h3>
+<hr />
+<h4>¿Está seguro de que desea eliminar este empleado?</h4>
+<h4>Advertencia: Se eliminarán todos los empleados con este estatus.</h4>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Volver", "Index") |
+            <input type="submit" value="Eliminar" class="btn btn-primary" />
+        </div>
+    }
+</div>
